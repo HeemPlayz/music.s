@@ -7,15 +7,12 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = 'T';
+const prefix = '.';
 client.on('ready', function() {
-    console.log(`i am ready ${client.user.username}`);
+    console.log(`i am ready ${client.user.tag}`);
 });
 
-      client.on('ready', () => {
-              client.user.setActivity("LOOK AT ME | .fuck up", {type: 'LISTENING'});
-      
-      });
+     
 /*
 ////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
 ////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -198,13 +195,6 @@ function search_video(query, cb) {
 function isYoutube(str) {
     return str.toLowerCase().indexOf('youtube.com') > -1;
 }
- client.on('message', message => {
-  if (message.content === `${prefix}`) {
-    const embed = new Discord.RichEmbed()
-     .setColor("RANDOM")
-.setFooter('Thank You For use this bot ! .')
-      message.channel.send({embed});
-     }
-    });
+ 
 
  client.login(process.env.BOT_TOKEN);
